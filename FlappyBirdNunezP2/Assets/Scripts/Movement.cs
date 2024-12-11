@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D> ();
-        anim = GetComponent<Animator>();
+        anim = GetComponent<Animator> ();
     }
 
     // Update is called once per frame
@@ -33,6 +33,7 @@ public class Movement : MonoBehaviour
     void OnCollisionEnter2D () 
     {
         isDead = true;
-        anim.SetTrigger("Die");
+        anim.SetTrigger  ("Die");
+        GameControl.instance.BirdDied (); 
     }
 }
